@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xmlns:context="http://www.springframework.org/schema/context" 
+xmlns:p="http://www.springframework.org/schema/p" 
+xmlns:tx="http://www.springframework.org/schema/tx" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context.xsd 
+http://www.springframework.org/schema/tx 
+http://www.springframework.org/schema/tx/spring-tx.xsd"> 
+<bean id="s1" class="in.com.spring.Student">
+<property name="roll" value="7"></property>
+<property name="name" value="prasanna"></property>
+</bean>
+<bean id="e1" class="in.com.spring.Employee">
+<property name="id" value="1"></property>
+<property name="name" value="navya"></property>
+<property name="dept" value="ece"></property>
+<property name="location" value="hyd"></property>
+<property name="student" ref="s1"></property>
+</bean>
+<bean id="c1" class="in.com.spring.College">
+<constructor-arg index="0" value="Ece"></constructor-arg>
+<constructor-arg index="1" value="41"></constructor-arg>
+<constructor-arg index="2" ref="e1"></constructor-arg>
+</bean>
+<bean id="s2" class="in.com.spring.Student2">
+ <property name="name" value="navya"></property>
+  <property name="section" value="A"></property>
+   <property name="marks" value="971"></property>
+    <property name="collegeName" value="GNITC"></property>
+</bean>
+<bean id="e2" class="in.com.spring.Employee1">
+<constructor-arg index="0" value="101"></constructor-arg>
+<constructor-arg index="1" value="Navya"></constructor-arg>
+<constructor-arg index="2" value="50000"></constructor-arg>
+<constructor-arg index="3" value="electronics"></constructor-arg>
+</bean>
+ </beans>
