@@ -1,0 +1,39 @@
+package in.com.spring;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class Config 
+{
+	 @Bean
+	 public Student1 stud()
+	 {
+		 Student1 s=new Student1(1,"Prasanna Laxmi");
+		return s;
+		 
+	 }
+	 @Bean
+	 public Emp em()
+	 {
+		 Emp e=new Emp();
+		 e.setId(100);
+		 e.setName("Reddy");
+		return e;
+		 
+	 }
+	 @Bean
+	 public University uni()
+	 {
+		 University u=new University(112,"gnitc",stud(),em());
+		return u;
+		 
+	 }
+	 @Bean
+	 public Cricket cri()
+	 {
+		 Cricket c=new Cricket("cricket", 11,"cricket Stadium",60000);
+	   return c;
+	 }
+
+}
