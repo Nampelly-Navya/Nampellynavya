@@ -1,0 +1,21 @@
+package in.com.spring;
+public class Cricket
+{
+ String name;
+ int Players;
+ String Stadium_name;
+ int Stadium_Strength;
+public Cricket(String name, int players, String stadium_name, int stadium_Strength) {
+	super();
+	this.name = name;
+	Players = players;
+	Stadium_name = stadium_name;
+	Stadium_Strength = stadium_Strength;
+}
+@Override
+public String toString() {
+	return "Cricket [name=" + name + ", Players=" + Players + ", Stadium_name=" + Stadium_name + ", Stadium_Strength="
+			+ Stadium_Strength + "]";
+}
+ 
+}
