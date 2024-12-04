@@ -1,0 +1,38 @@
+package in.com.spring;
+public class Student2
+{
+  String Name;
+  String section;
+  int marks;
+  String collegeName;
+public String getName() {
+	return Name;
+}
+public void setName(String name) {
+	Name = name;
+}
+public String getSection() {
+	return section;
+}
+public void setSection(String section) {
+	this.section = section;
+}
+public int getMarks() {
+	return marks;
+}
+public void setMarks(int marks) {
+	this.marks = marks;
+}
+public String getCollegeName() {
+	return collegeName;
+}
+public void setCollegeName(String collegeName) {
+	this.collegeName = collegeName;
+}
+@Override
+public String toString() {
+	return "Student2 [Name=" + Name + ", section=" + section + ", marks=" + marks + ", collegeName=" + collegeName
+			+ "]";
+}
+  
+}
