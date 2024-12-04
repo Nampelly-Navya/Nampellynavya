@@ -1,0 +1,21 @@
+package in.com.spring;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        ApplicationContext context=new ClassPathXmlApplicationContext("config.xml");
+        Employee1 employee=context.getBean("e2",Employee1.class);
+        System.out.println(employee);
+//        College college=context.getBean("c1",College.class);
+//        System.out.println(college);
+       Student2 student=context.getBean("s2",Student2.class);
+        System.out.println(student);
+  
+    }
+}
